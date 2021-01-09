@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <!-- flexbox -->
+    <div class="wrapper">
+        <header class="header">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <article class="main">
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>
+                            <input id="inputUserName" onkeyup="success()" placeholder="User Name... ">
+                        </th>
+                        <th>
+                            <input id="inputAppName" onkeyup="success()" list="NameOfAppDD"
+                                placeholder="Application Name...">
+                            <datalist id="NameOfAppDD">
+                                <option value="Internet Explorer">
+                                <option value="Firefox">
+                                <option value="Chrome">
+                                <option value="Opera">
+                                <option value="Safari">
+                            </datalist>
+                        </th>
+                        <th>
+                            <button class="btnTable" id="searchBtn" onclick="filterTable()" disabled>Search</button>
+                            <button class="btnTable" id="resetBtn" onclick="removeProperty()" disabled>Reset</button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">
+                            <input type="text" id="roles" onfocusin="document.getElementById('roles').classList.remove('isEmpty')" placeholder="Type the new role ...">
+                        </th>
+                    </tr>
+                    <tr id="tableHeader">
+                        <th> User Name </th>
+                        <th> Applaction Name </th>
+                        <th> Roles </th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td> Michael Jordan </td>
+                        <td> Basketball </td>
+                        <td>
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul> <button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Michael Kobe Bryant </td>
+                        <td> Basketball </td>
+                        <td> 
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul><button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> xx Brett Favre </td>
+                        <td> Football </td>
+                        <td> 
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul><button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Babe Ruth </td>
+                        <td> Baseball </td>
+                        <td> 
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul><button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Tom Brady </td>
+                        <td> Football </td>
+                        <td> 
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul><button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> LeBron James </td>
+                        <td> Basketball </td>
+                        <td> 
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul><button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Steph Curry </td>
+                        <td> Basketball </td>
+                        <td> 
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul><button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Jose Berrios </td>
+                        <td> Baseball </td>
+                        <td>
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul> <button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Kirby Pucket </td>
+                        <td> Baseball </td>
+                        <td>
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul> <button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Zach Parise </td>
+                        <td> Hockey </td>
+                        <td>
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul> <button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Jason Zucker </td>
+                        <td> Hockey </td>
+                        <td>
+                            <ul class="roleList">
+                                <li>1</li>
+                            </ul> <button class="getIndex">+</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <aside class="aside">Aside 1</aside>
+    </div>
+    <footer class="footer">
+        <p>
+            Copyright © Asma Alshahrani 2021
+        </p>
+    </footer>
+
+    <!-- bootstrap5 grid-->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Navbar</a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input id="inputUserName" onkeyup="success()" placeholder="User Name... ">
+                            </th>
+                            <th><input id="inputAppName" onkeyup="success()" placeholder="Application Name...">
+                            </th>
+                            <th>
+                                <button id="searchBtn" onclick="filterTable()" disabled>Search</button>
+                                <button id="resetBtn" onclick="removeProperty()" disabled>Reset</button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th> user name </th>
+                            <th> applaction name </th>
+                            <th> rols </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td> Michael Jordan </td>
+                            <td> Basketball </td>
+                            <td> Chicago Bulls </td>
+                        </tr>
+                        <tr>
+                            <td> Kobe Bryant </td>
+                            <td> Basketball </td>
+                            <td> LA Lakers </td>
+                        </tr>
+                        <tr>
+                            <td> Brett Favre </td>
+                            <td> Football </td>
+                            <td> Greenbay Packers </td>
+                        </tr>
+                        <tr>
+                            <td> Babe Ruth </td>
+                            <td> Baseball </td>
+                            <td> New York Yankees </td>
+                        </tr>
+                        <tr>
+                            <td> Tom Brady </td>
+                            <td> Football </td>
+                            <td> New England Patriots </td>
+                        </tr>
+                        <tr>
+                            <td> LeBron James </td>
+                            <td> Basketball </td>
+                            <td> LA Lakers </td>
+                        </tr>
+                        <tr>
+                            <td> Steph Curry </td>
+                            <td> Basketball </td>
+                            <td> Golden State Warriors </td>
+                        </tr>
+                        <tr>
+                            <td> Jose Berrios </td>
+                            <td> Baseball </td>
+                            <td> Minnesota Twins </td>
+                        </tr>
+                        <tr>
+                            <td> Kirby Pucket </td>
+                            <td> Baseball </td>
+                            <td> Minnesota Twins </td>
+                        </tr>
+                        <tr>
+                            <td> Zach Parise </td>
+                            <td> Hockey </td>
+                            <td> Minnesota Wild </td>
+                        </tr>
+                        <tr>
+                            <td> Jason Zucker </td>
+                            <td> Hockey </td>
+                            <td> Minnesota Wild </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">footer content here.</span>
+    </footer> -->
+
+</body>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="utility.js"></script>
+
+</html>
